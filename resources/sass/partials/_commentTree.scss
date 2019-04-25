@@ -1,0 +1,141 @@
+.thread {
+    background-color: gray;
+    padding: 10px;
+    margin: 10px 0 0;
+    display: block;
+
+    .collapsed {
+        display: none;
+        .expand-button {
+            display: inline;
+            &:hover  {
+                cursor: pointer;
+            }       
+        }
+        ul.tagline {
+            display: inline;
+            padding-left: 0px;
+            white-space: nowrap;
+            list-style: none;
+            
+            li {
+                display: inline;
+            }
+            li a {
+                text-decoration: none;
+                color: inherit;
+                &:hover {
+                    color:black;
+                    text-decoration:none;
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+    .comment {
+        overflow: hidden;
+        margin-top: 5px;
+
+        ul.extra {
+            list-style: none;
+            margin: 0px;
+
+            li {
+                display: inline;
+                cursor: pointer;
+            }
+        }
+
+        .body {
+            padding: 5px;
+            overflow: hidden;
+
+            ul.tagline {
+                padding-left: 0px;
+                white-space: nowrap;
+                list-style: none;
+                
+                li {
+                    display: inline;
+                }
+                li a {
+                    text-decoration: none;
+                    color: inherit;
+                    &:hover {
+                        color:black;
+                        text-decoration:none;
+                        cursor:pointer;
+                    }
+                }
+            }
+            .extra {
+                margin-left: 0px;
+                padding-left: 0px;
+
+                li a {
+                    color: inherit;
+                }
+            }
+        }
+
+        .collapse-button {
+            display: inline;
+            &:hover  {
+                cursor: pointer;
+            }
+        }
+
+        .voting {
+            float: left;
+
+            position: relative; 
+            
+            width: 30px;
+            height: 100px;
+
+            .centered-vertically {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+
+                .upvote {
+                    background-image: url('../assets/upvote.svg');
+                    width: 20px;
+                    height: 20px;
+                    background-size: 20px 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 20px;
+                    border: 1px solid #d1d1d1;
+
+                    cursor: pointer;
+                }
+
+                .downvote {
+                    background-image: url('../assets/downvote.svg');
+                    width: 20px;
+                    height: 20px;
+                    background-size: 20px 20px;
+
+                    margin-left: auto;
+                    margin-right: auto;
+                    border: 1px solid #d1d1d1;
+
+                    cursor: pointer;
+                }
+            }
+        } // End .voting
+    } // End Comment
+}
+
+.thread .thread {
+    display: block;
+    position: relative; 
+    padding: 0 0 4px 4px;
+    margin: 4px 8px 0 0;
+    //background-color: white;
+}
+
+.thread.even {
+    background-color: white;
+}

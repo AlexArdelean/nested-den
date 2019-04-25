@@ -1,0 +1,33 @@
+.body {
+    display: grid;
+    grid-template-columns: 1fr;
+    //grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "navbar";
+    grid-gap: 10px;
+}
+
+.navbar {
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas:
+    ". scrollmenu .";
+}
+
+//align-self: center; //align is to center vertically justify is to center horizontally
+
+.grid div:nth-child(even) {
+    background-color: red;
+}
+
+@media screen and (min-width: 600px) 
+{
+    .body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "navbar navbar navbar navbar";
+    }
+}

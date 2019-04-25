@@ -1,0 +1,44 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Base
+//@import 'base/base';
+
+// Components
+@import 'components/header/header';
+@import 'components/header/navbar';
+@import 'components/sidepanel';
+@import 'components/modals';
+
+// Layouts
+@import 'layouts/layout';
+
+// Posts
+@import 'posts/index';
+@import 'posts/show';
+
+// Partials
+@import 'partials/submission';
+@import 'partials/commentTree';
+@import 'partials/loader';
+
+html {
+    // Gets rid of y scroll bar in calculations
+    width: calc(100vw - (100vw - 100%));
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    //background-color: #f4f4f4;
+    background-color: #fff;
+}
+
+//////////////////////////////////////
